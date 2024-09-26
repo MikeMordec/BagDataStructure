@@ -1,6 +1,3 @@
-Here’s a comprehensive and engaging README template for your BagDataStructure repository that includes all the essential elements. Feel free to customize any sections to better fit your style and project details!
-BagDataStructure
-
 📚 Overview
 
 BagDataStructure is a Python implementation of a bag (or multiset) data structure that allows for efficient management of items with a maximum size limit. This project demonstrates basic operations such as adding, removing, and checking for items, along with an accompanying test suite to validate its functionality.
