@@ -1,0 +1,74 @@
+print ("Michael Mordec, 6/28/22, Lab 7, CSC 242:")
+class Bag(object) :
+    
+    def __init__(self, maxsize = 10) :
+        self.maxsize = maxsize
+        self._items = list()
+
+    def isEmpty(self):
+        return len(self)==0
+
+    def size(self):
+        return len(self)
+
+    def add(self, item) :
+        if (len(self) >= self.maxsize) :
+            raise Exception('Full')
+        self._items.append(item)
+        print("Item added:", item)
+
+    def remove(self, item) :
+        self._items.remove(item)
+        print("Item Removed:",item)
+
+    def contains(self, item) :
+        return self._items.__contains__(item)
+
+    def __len__(self) :
+        return len(self._items)
+
+    def __iter__(self) :
+        for item in self._items:
+            yield item
+
+def testBag() :
+    bag = Bag()
+
+    assert bag.isEmpty()
+
+    bag.add(10)
+    bag.add("item 2")
+    bag.add(30)
+
+    assert not bag.isEmpty()
+
+    assert len(bag) == 3
+
+    assert bag.size() == 3
+
+    bag.remove(30)
+    assert len(bag) == 2
+
+    assert bag.contains(10)
+
+    bag.add(31)
+    bag.add(32)
+    bag.add(33)
+    bag.add(34)
+    bag.add(35)
+    bag.add(36)
+    bag.add(37)
+    bag.add(38)
+
+    assert bag.size() == 10
+    try:
+        bag.add(39)
+        assert False
+    except:
+        assert True
+
+    for i in bag :
+        print (i)
+
+if __name__ == "__main__":
+    testBag()
