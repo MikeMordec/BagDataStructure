@@ -1,3 +1,5 @@
+BagDataStructure
+
 📚 Overview
 
 BagDataStructure is a Python implementation of a bag (or multiset) data structure that allows for efficient management of items with a maximum size limit. This project demonstrates basic operations such as adding, removing, and checking for items, along with an accompanying test suite to validate its functionality.
@@ -12,15 +14,21 @@ BagDataStructure is a Python implementation of a bag (or multiset) data structur
 
 To get started with this project, clone the repository and run the Python script:
 
+bash
+
 git clone https://github.com/yourusername/BagDataStructure.git
 cd BagDataStructure
 
 Make sure you have Python 3.x installed on your machine. You can run the script directly:
 
+bash
+
 python bag.py
 
 📖 Usage
 Initializing the Bag
+
+python
 
 from bag import Bag
 
@@ -29,19 +37,27 @@ my_bag = Bag(maxsize=10)
 
 Adding Items
 
+python
+
 my_bag.add(10)
 my_bag.add("item 2")
 
 Removing Items
 
+python
+
 my_bag.remove(10)
 
 Checking Contents
+
+python
 
 if my_bag.contains("item 2"):
     print("Item is in the bag.")
 
 Size and Iteration
+
+python
 
 print("Current size:", my_bag.size())
 
@@ -51,6 +67,8 @@ for item in my_bag:
 ✅ Testing
 
 To ensure the integrity of the Bag implementation, a test suite is included. Run the following command to execute the tests:
+
+bash
 
 python -m unittest test_bag.py
 
